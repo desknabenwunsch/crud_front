@@ -1,27 +1,39 @@
-# FERodamientoApi
+# CRUD_Pilotos_client
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
+_Integración de un cliente en angular para consumir la APi desarrollada en .Net Core 6_
+Este proyecto fue generado con [Angular CLI](https://github.com/angular/angular-cli) version 13.2.3.
 
-## Development server
+### Pre-requisitos 📋
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+_Se recomienda haber clonado el repositorio del backEnd desde la siguiente ruta_
 
-## Code scaffolding
+```
+* [BackEnd](https://github.com/desknabenwunsch/crud_back) - Api de .Net core 6
+```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Comenzando 🚀
 
-## Build
+_Estas instrucciones te permitirán obtener el funcionamiento en tu máquina local._
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Ejecutar `ng serve` para un servidor de desarrollo. Navegar a `http://localhost:4200/`. La app recargara automaticamente los cambios que se realicen.
 
-## Running unit tests
+## Construido con las siguientes herramientas 🛠️
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+_Menciona las herramientas que utilizaste para crear tu proyecto_
 
-## Running end-to-end tests
+* [Angular CLI](https://angular.io/cli)
+* [NodeJS](https://nodejs.org/es/)
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+## Autores ✒️
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+* **Manuel Läuft** - *Trabajo Inicial* - [desknabenwunsch](https://github.com/desknabenwunsch)
+
+También puedes mirar la lista de todos los [contribuyentes](https://github.com/desknabenwunsch/crud_front/graphs/contributors) quíenes han participado en este proyecto. 
+
+
+
+---
+⌨️ por [desknabenwunsch](https://github.com/desknabenwunsch)

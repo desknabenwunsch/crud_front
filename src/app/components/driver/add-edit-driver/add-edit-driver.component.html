@@ -1,0 +1,34 @@
+<form>
+    <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <input type="text" class="form-control" name="name" [(ngModel)]="name" placeholder="Driver Name">
+    </div>
+    <div class="mb-3">
+        <label for="country" class="form-label">Country</label>
+        <input type="text" class="form-control" name="country" [(ngModel)]="country" placeholder="Driver country">
+    </div>
+    <div class="mb-3">
+        <label for="team" class="form-label">Team</label>
+        <input type="text" class="form-control" name="team" [(ngModel)]="team" placeholder="Driver team">
+    </div>
+    <div class="mb-3">
+        <label for="number" class="form-label">Number</label>
+        <input type="number" class="form-control" name="number" [(ngModel)]="number" placeholder="Driver number">
+    </div>
+    <div class="mb-3">
+        <label for="categoryId" class="form-label">Category</label>
+        <!-- <input type="text" class="form-control" name="categoryId" [(ngModel)="categoryId"]
+            *ngIf="driver.id!=0" disabled> -->
+        <select name="categoryId" id="categoryId" class="form-control"
+            [(ngModel)]="categoryId" *ngIf="driver.id==0">
+            <option *ngFor="let type of categoryList$|async" [value]="type.id">{{ type.categoryName }}
+            </option>
+        </select>
+    </div>
+    <button (click)="addDriver()" *ngIf="driver.id==0" class="btn btn-outline-primary">
+        Add Driver
+    </button>
+    <button (click)="updateDriver()" *ngIf="driver.id!=0" class="btn btn-outline-info">
+        Update Driver
+    </button>
+</form>
