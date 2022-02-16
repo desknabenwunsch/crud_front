@@ -29,7 +29,7 @@ export class AddEditDriverComponent implements OnInit {
     this.country = this.driver.country;
     this.team = this.driver.team;
     this.number = this.driver.number;
-    this.categoryId = this.categoryId;
+    this.categoryId = this.driver.categoryId;
     this.driverList$ = this.service.getDriversList();
     this.categoryList$ = this.service.getCategoriesList();
   }
@@ -61,6 +61,31 @@ export class AddEditDriverComponent implements OnInit {
   }
 
   updateDriver(){
+    let driver = {
+      id: this.id,
+      name:this.name,
+      country:this.country,
+      team:this.team,
+      number:this.number,
+      categoryId:this.categoryId
+    }
 
+    let id:number = this.id;
+    this.service.updateDriver(id,driver).subscribe(res => {
+      let closeModalBtn = document.getElementById('add-edit-modal-close');
+      if(closeModalBtn) {
+        closeModalBtn.click();
+      }
+
+      let showUpdateSuccess = document.getElementById('update-success-alert');
+      if(showUpdateSuccess) {
+        showUpdateSuccess.style.display = "block";
+      }
+      setTimeout(() => {
+        if(showUpdateSuccess) {
+          showUpdateSuccess.style.display = "none";
+        }
+      }, 3000);
+    })
   }
 }

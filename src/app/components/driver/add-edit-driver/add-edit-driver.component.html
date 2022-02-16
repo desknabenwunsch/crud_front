@@ -17,8 +17,8 @@
     </div>
     <div class="mb-3">
         <label for="categoryId" class="form-label">Category</label>
-        <!-- <input type="text" class="form-control" name="categoryId" [(ngModel)="categoryId"]
-            *ngIf="driver.id!=0" disabled> -->
+        <input type="text" class="form-control" name="categoryId" [(ngModel)]="categoryId"
+            *ngIf="driver.id!=0" disabled>
         <select name="categoryId" id="categoryId" class="form-control"
             [(ngModel)]="categoryId" *ngIf="driver.id==0">
             <option *ngFor="let type of categoryList$|async" [value]="type.id">{{ type.categoryName }}

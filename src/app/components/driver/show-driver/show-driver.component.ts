@@ -45,6 +45,29 @@ export class ShowDriverComponent implements OnInit {
     this.activateAddEditDriverComponent = true;
   }
 
+  modalEdit(item:any){
+    this.driver = item;
+    this.modalTitle = "Edit Driver";
+    this.activateAddEditDriverComponent = true;
+  }
+
+  delete(item:any) {
+    if(confirm(`Are you sure bout deleting this driver ${item.id} ?`)){
+      this.service.deleteDriver(item.id).subscribe(res=> {
+        let showDeleteSuccess = document.getElementById('delete-success-alert');
+        if(showDeleteSuccess) {
+          showDeleteSuccess.style.display = "block";
+        }
+        setTimeout(() => {
+          if(showDeleteSuccess){
+            showDeleteSuccess.style.display = "none";
+          }
+        }, 3000);
+        this.driverList$ = this.service.getDriversList();
+      })
+    }
+  }
+
   modalClose(){
     this.activateAddEditDriverComponent = false;
     this.driverList$ = this.service.getDriversList();
